@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:onClick="conversion"
+        android:text="Конвертировать"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputCurrency" />
+
+    <EditText
+        android:id="@+id/outputMoney"
+        android:layout_width="191dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/outputCurrency"
+        app:layout_constraintTop_toTopOf="@+id/outputCurrency" />
+
+    <Spinner
+        android:id="@+id/inputCurrency"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/outputCurrency"
+        app:layout_constraintEnd_toStartOf="@+id/inputMoney"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputMoney"
+        android:layout_width="193dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputCurrency"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/outputCurrency"
+        android:layout_width="153dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="252dp"
+        app:layout_constraintBottom_toTopOf="@+id/convertButton"
+        app:layout_constraintEnd_toStartOf="@+id/outputMoney"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCurrency" />
+
+</android.support.constraint.ConstraintLayout>
